@@ -1,9 +1,10 @@
-def build_prompt(user_input, tone="Default", style="Default", format_type="Default"):
+def build_prompt(user_input, tone="Default", style="Default", format_type="Default", reference_post=None):
+
     """
     Preprocess user input with style instructions.
+    Can optionally include a reference post to guide the output style.
     Returns system + user messages for Groq API.
     """
-
     instructions = []
 
     if tone != "Default":
@@ -31,7 +32,23 @@ def build_prompt(user_input, tone="Default", style="Default", format_type="Defau
 
     system_msg = " ".join(instructions) if instructions else "Respond helpfully to the user."
 
+    # If a reference post is provided, create a detailed user prompt
+    if reference_post:
+        final_user_content = f"""
+Your primary task is to respond to the following request: "{user_input}"
+
+---
+**IMPORTANT INSTRUCTION:** You must generate your entire response in a style, tone, and format that is highly similar to the following reference text. Analyze its structure, vocabulary, and sentence length, and emulate it closely.
+
+**REFERENCE TEXT:**
+\"\"\"
+{reference_post}
+\"\"\"
+"""
+    else:
+        final_user_content = user_input
+
     return [
         {"role": "system", "content": system_msg},
-        {"role": "user", "content": user_input},
+        {"role": "user", "content": final_user_content},
     ]

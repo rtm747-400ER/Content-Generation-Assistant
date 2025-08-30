@@ -1,5 +1,5 @@
 PROMPT_TEMPLATES = {
-    "📈 Marketing & Business": {
+    "Marketing & Business": {
         "Product Description": {
             "template": "Write a compelling product description for {product_name}. Highlight its key features: {key_features}. Target audience: {target_audience}. Focus on benefits and create urgency.",
             "placeholders": ["product_name", "key_features", "target_audience"],
@@ -22,7 +22,7 @@ PROMPT_TEMPLATES = {
         }
     },
     
-    "📱 Social Media": {
+    "Social Media": {
         "Instagram Caption": {
             "template": "Create an engaging Instagram caption for {post_topic}. Include relevant hashtags, ask a question to boost engagement, and match the tone to {personality}. Keep it authentic and relatable.",
             "placeholders": ["post_topic", "personality"],
@@ -45,7 +45,7 @@ PROMPT_TEMPLATES = {
         }
     },
     
-    "✍️ Creative Writing": {
+    "Creative Writing": {
         "Short Story": {
             "template": "Write a {genre} short story (500-800 words) featuring {main_character} who faces {central_conflict}. Setting: {setting}. Include dialogue and a satisfying resolution.",
             "placeholders": ["genre", "main_character", "central_conflict", "setting"],
@@ -68,7 +68,7 @@ PROMPT_TEMPLATES = {
         }
     },
     
-    "🎓 Educational & Explanatory": {
+    "Educational & Explanatory": {
         "ELI5 Explanation": {
             "template": "Explain {complex_topic} like I'm 5 years old. Use simple words, fun analogies, and examples a child would understand. Make it engaging and easy to follow.",
             "placeholders": ["complex_topic"],
@@ -91,7 +91,7 @@ PROMPT_TEMPLATES = {
         }
     },
     
-    "💼 Professional": {
+    "Professional": {
         "Cover Letter": {
             "template": "Write a compelling cover letter for {job_title} position at {company_name}. Highlight relevant experience: {key_experience}. Show enthusiasm and explain why you're a perfect fit.",
             "placeholders": ["job_title", "company_name", "key_experience"],
@@ -114,7 +114,7 @@ PROMPT_TEMPLATES = {
         }
     },
     
-    "🏠 Personal": {
+    "Personal": {
         "Love Letter": {
             "template": "Write a heartfelt love letter to {recipient} mentioning {special_memory} and expressing {main_feeling}. Make it personal, romantic, and genuine.",
             "placeholders": ["recipient", "special_memory", "main_feeling"],

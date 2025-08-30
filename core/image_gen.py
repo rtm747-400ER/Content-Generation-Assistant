@@ -84,7 +84,7 @@ class ImageGenerator:
         return [image_bytes]
 
 
-# Quick test
+# test
 if __name__ == "__main__":
     test_prompt = "A simple test prompt: a red apple on a wooden table, photorealistic"
     
