@@ -140,8 +140,8 @@ else:
     st.sidebar.info("💡 Tip: Be descriptive in your prompts for better results!")
     st.sidebar.markdown("**Try prompts like:**")
     st.sidebar.markdown("• *A futuristic cityscape at sunset*")
-    st.sidebar.markdown("• *Portrait of a wise old wizard*")
-    st.sidebar.markdown("• *Minimalist logo design for coffee shop*")
+    st.sidebar.markdown("• *A Mona Lisa styled potrait of a cat*")
+    st.sidebar.markdown("• *A lion sitting on a tree in a dense forest*")
 
 # -------------------------------
 # Sidebar Tools
