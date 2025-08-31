@@ -24,7 +24,7 @@ with st.sidebar:
     st.markdown("---")
     if mode == "📝 Text":
         st.subheader("Text Options")
-        use_template = st.toggle("Use Prompt Template", value=st.session_state.use_template)
+        use_template = st.toggle("Use Content Template", value=st.session_state.use_template)
         st.session_state.use_template = use_template
         if not use_template:
             tone = st.selectbox("Tone",["Default", "Formal", "Casual", "Persuasive", "Humorous"])
@@ -34,7 +34,7 @@ with st.sidebar:
             tone, style, format_type = "Default", "Default", "Default"
         if use_template:
             st.markdown("---")
-            st.subheader("Prompt Templates")
+            st.subheader("Content Templates")
             categories = get_template_categories()
             selected_category = st.selectbox("Category", categories, index=0)
             templates_in_category = get_templates_in_category(selected_category)
