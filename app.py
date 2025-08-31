@@ -24,7 +24,7 @@ with st.sidebar:
     st.markdown("---")
     if mode == "📝 Text":
         st.subheader("Text Options")
-        use_template = st.toggle("Use Content Template", value=st.session_state.use_template)
+        use_template = st.toggle("Use Prompt Template", value=st.session_state.use_template)
         st.session_state.use_template = use_template
         if not use_template:
             tone = st.selectbox("Tone",["Default", "Formal", "Casual", "Persuasive", "Humorous"])
@@ -34,7 +34,7 @@ with st.sidebar:
             tone, style, format_type = "Default", "Default", "Default"
         if use_template:
             st.markdown("---")
-            st.subheader("Content Templates")
+            st.subheader("Prompt Templates")
             categories = get_template_categories()
             selected_category = st.selectbox("Category", categories, index=0)
             templates_in_category = get_templates_in_category(selected_category)
@@ -55,7 +55,7 @@ with st.sidebar:
     elif mode == "🎨 Image":
         st.subheader("Image Generation Mode")
         st.info("💡 Tip: Be descriptive in your prompts for better results!")
-        st.markdown("**Examples:**\n- *A futuristic cityscape at sunset*\n- *A Mona Lisa styled potrait of a cat*\n- *A lion sitting on a tree in a dense forest*")
+        st.markdown("**Examples:**\n- *A futuristic cityscape at sunset*\n- *A Mona Lisa styled portrait of a cat*\n- *A lion sitting on a tree in a dense forest*")
     st.markdown("---")
     st.title("🛠️ Tools")
     if st.button("Word Count"):
