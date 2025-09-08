@@ -97,7 +97,7 @@ if mode == "📝 Text":
                         value = st.text_area(
                             label,
                             value=st.session_state.template_values.get(placeholder, ""),
-                            height=40, # <<< CHANGE: Standardized height
+                            height=40,
                             key=f"template_{placeholder}",
                             help="Optional: Paste a previous post here to guide the writing style."
                         )
